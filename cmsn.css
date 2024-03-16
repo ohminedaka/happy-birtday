@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  background: #020202;
+  cursor: pointer;
+}
+canvas {
+  display: block;
+}
+h1 {
+  position: absolute;
+
+  color: #fff;
+  font-family: "Source Sans Pro";
+  font-size: 5em;
+  font-weight: 900;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  cursor: pointer;
+}
+
+#no {
+  font-size: 2px;
+}
+
+#yes {
+  font-size: 1px;
+}

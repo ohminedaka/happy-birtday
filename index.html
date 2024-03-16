@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birth Day Bae</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Babylonica&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-image: url("./background.gif");
+        background-size: cover;
+        font-family: "Babylonica", sans-serif;
+      }
+      .btn-container {
+        position: relative;
+      }
+      #no {
+        transition: all 0.3s;
+        position: absolute;
+      }
+      #no-btn {
+        font-size: 40px;
+        font-family: "Babylonica", sans-serif;
+        border-radius: 15%;
+      }
+      #yes-btn {
+        font-size: 4px;
+        font-family: "Babylonica", sans-serif;
+        cursor: pointer;
+      }
+      h1 {
+        color: rgb(227, 47, 19);
+        margin-top: -30px;
+        font-size: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Chúc mừng sinh nhật bé iu !!!</h1>
+    <div id="no" class="btn-container">
+      <button type="button" id="no-btn">Ừ thằng béo</button>
+    </div>
+    <div id="yes" class="btn-container">
+      <button type="button" id="yes-btn">Vâng anh iu</button>
+    </div>
+
+    <audio
+      id="background-music"
+      src="./duc-phuc-toann-remix-nhac-hot-tiktok-2023-audio-lyrics.mp3"
+      type="audio/mp3"
+      loop
+      autoplay
+    ></audio>
+    <script>
+      const no = document.getElementById("no");
+      const yes = document.getElementById("yes");
+      let scaleValueNo = 1;
+      let scaleValueYes = 1;
+      no.addEventListener("mouseover", () => {
+        const x = Math.floor(Math.random() * (window.innerWidth - 150));
+        const y = Math.floor(Math.random() * (window.innerHeight - 150));
+
+        no.style.left = `${x}px`;
+        no.style.top = `${y}px`;
+
+        scaleValueNo -= 0.02;
+        no.style.transform = `scale(${scaleValueNo})`;
+
+        scaleValueYes += 0.1;
+        yes.style.transform = `scale(${scaleValueYes})`;
+      });
+      yes.addEventListener("click", function () {
+        window.location.href = "index1.html";
+      });
+    </script>
+  </body>
+</html>
